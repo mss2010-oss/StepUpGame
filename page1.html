@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Марғау орманнан өтеді</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Марғау орманнан өтеді!</h1>
+        <p>Марғау орманнан өту үшін тапсырманы орындауы керек.</p>
+        <p>Тапсырма: Қай сөздер салыстырмалы түрде дұрыс келеді? («Ең биік, биік, биік емес»)</p>
+        <input type="text" id="answer1">
+        <button onclick="checkAnswer()">Тексеру</button>
+        <button onclick="location.href='page2.html'">Келесі бет</button>
+    </div>
+    <script>
+        function checkAnswer() {
+            let answer = document.getElementById("answer1").value;
+            if (answer.toLowerCase() === "биік") {
+                alert("Дұрыс!");
+            } else {
+                alert("Қате! Қайта тырысыңыз.");
+            }
+        }
+    </script>
+</body>
+</html>
